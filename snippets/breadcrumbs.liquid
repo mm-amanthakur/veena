@@ -41,7 +41,7 @@
       </li>
 
       {%- case template_name -%}
-        {%- when 'collection' and collection.handle -%}
+        {%- when 'collection' -%}
           <li class="breadcrumbs__listitem">
             <a
               class="breadcrumbs__link"
@@ -105,4 +105,13 @@
       {%- endcase -%}
     </ol>
   </nav>
-{%- endunless -%}
+{%- endunless -%}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- when 'collection' and collection.handle -%}"
+  to: "{%- when 'collection' -%}"
+  position: 931..956
+{%- endcomment -%}
